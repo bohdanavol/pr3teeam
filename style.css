@@ -1,0 +1,69 @@
+.certificates {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cert-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cert-item {
+    width: 450px;
+    transition: transform 0.3s;
+}
+
+.cert-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cert-item:hover {
+    transform: scale(1.03);
+}
+
+.cert-item p {
+    font-size: 15px;
+    color: #555;
+    font-weight: 300;
+    margin-top: 8px;
+}
+
+.contact-footer {
+    text-align: center;
+    background: #f7f7f7;
+    padding: 40px 15px;
+    border-top: 1px solid #ddd;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.contact-footer h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.contacts a {
+    color: #222;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contacts a:hover {
+    color: #007BFF;
+    transform: scale(1.05);
+}
