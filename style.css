@@ -1,69 +1,124 @@
-.certificates {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+.services {
+  padding: 2rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  color: #004080;
+  margin-bottom: 1.5rem;
+}
+
+.grid-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.service {
+  background: #e6f0ff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: left;
+  font-weight: 500;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.35s ease;
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.service h3 {
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.service p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Ефект наведення */
+.service:hover {
+  background: linear-gradient(145deg, #cce0ff, #f0f8ff);
+  transform: scale(1.07);
+  box-shadow: 0 10px 25px rgba(0, 64, 128, 0.35);
+}
+
+/* === Секція "Про нас" (Flexbox 2 колонки) === */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0f5ff;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Анімація зображення */
+.about img:hover {
+  transform: scale(1.05);
+}
+
+/* === Адаптивність === */
+@media (max-width: 1200px) {
+  .grid-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
     text-align: center;
-    padding: 40px 20px;
-}
+  }
 
-.cert-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+  .about-image {
+    order: -1;
+  }
 
-.cert-item {
-    width: 450px;
-    transition: transform 0.3s;
-}
-
-.cert-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.cert-item:hover {
-    transform: scale(1.03);
-}
-
-.cert-item p {
-    font-size: 15px;
-    color: #555;
-    font-weight: 300;
-    margin-top: 8px;
-}
-
-.contact-footer {
-    text-align: center;
-    background: #f7f7f7;
-    padding: 40px 15px;
-    border-top: 1px solid #ddd;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.contact-footer h2 {
-    margin-bottom: 20px;
-    font-size: 1.6rem;
-    color: #333;
-}
-
-.contacts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.contacts a {
-    color: #222;
-    font-size: 1.05rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.contacts a:hover {
-    color: #007BFF;
-    transform: scale(1.05);
+  .grid-services {
+    grid-template-columns: 1fr;
+  }
 }
